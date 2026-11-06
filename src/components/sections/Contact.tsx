@@ -8,14 +8,20 @@ export function Contact() {
     <Section id="contact" title="Contact">
       <p className="leading-relaxed text-foreground/90">I'm always happy to talk about collaborations, so feel free to reach out anytime. Email is the easiest way to reach me.</p>
       <ul className="mt-6 space-y-3 text-sm">
-        {siteConfig.emails.map((email) => (
-          <li key={email} className="flex items-center gap-3">
-            <Mail className="size-4 shrink-0 text-muted-foreground" aria-hidden />
-            <a href={`mailto:${email}`} className="underline-offset-4 hover:underline">
-              {email}
-            </a>
-          </li>
-        ))}
+        <li className="flex items-start gap-3">
+          <Mail className="mt-0.5 size-4 shrink-0 text-muted-foreground" aria-hidden />
+          <div className="flex flex-col gap-1.5">
+            {siteConfig.emails.map((email) => (
+              <a
+                key={email}
+                href={`mailto:${email}`}
+                className="underline-offset-4 hover:underline"
+              >
+                {email}
+              </a>
+            ))}
+          </div>
+        </li>
         <li className="flex items-center gap-3">
           <MapPin className="size-4 shrink-0 text-muted-foreground" aria-hidden />
           <span>{siteConfig.location}</span>

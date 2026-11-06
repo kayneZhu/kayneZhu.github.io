@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
   shortName: "Yukang Zhu",
   roles: ["Researcher, LLM Reasoning & Agents", "Software Engineer"],
   location: "Hangzhou, China",
-  emails: ["zhuyukang2000@gmail.com", "yukangzhu@g.ucla.edu"],
+  emails: ["zhuyukang2000@gmail.com", "yukangzhu@g.ucla.edu", "yukangzhu2000@163.com"],
   about: [
     "I'm a researcher and software engineer working on large language models. Most of my time goes into two questions: how to teach models to reason efficiently, and how to build agents that get better at their work by learning from their own mistakes.",
     "Before this, I spent almost two years at TikTok as a software engineer on the e-commerce team. I worked on the Seller Center web & mobile applications and later on the agent infrastructure behind its LLM features. I also explored agentic development in depth, working to integrate AI capabilities across our entire engineering and business workflow. Shipping things to real users changed how I think about research. These days I care a lot about whether an idea still works once it leaves the paper.",
