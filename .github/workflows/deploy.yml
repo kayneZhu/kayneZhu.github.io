@@ -42,7 +42,10 @@ jobs:
         run: |
           # User/org pages (<name>.github.io) serve from "/".
           # Project pages serve from "/<repo>/".
-          if [[ "${{ github.event.repository.name }}" == "${{ github.repository_owner }}.github.io" ]]; then
+          # GitHub treats owner/repo names case-insensitively, so compare in lowercase.
+          REPO='${{ github.event.repository.name }}'
+          OWNER='${{ github.repository_owner }}'
+          if [[ "${REPO,,}" == "${OWNER,,}.github.io" ]]; then
             echo "path=/" >> "$GITHUB_OUTPUT"
           else
             echo "path=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"

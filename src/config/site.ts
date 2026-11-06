@@ -3,10 +3,10 @@
  */
 interface SiteConfig {
   name: string;
-  role: string;
-  affiliation: string;
+  shortName: string;
+  roles: readonly string[];
   location: string;
-  email: string;
+  emails: readonly [string, ...string[]];
   about: readonly string[];
   social: {
     github: string;
@@ -20,17 +20,18 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "Yukang Zhu",
-  role: "Software Engineer & Researcher",
-  affiliation: "Research Intern, Westlake University",
+  name: "Yukang (Kayne) Zhu",
+  shortName: "Yukang Zhu",
+  roles: ["Researcher, LLM Reasoning & Agents", "Software Engineer"],
   location: "Hangzhou, China",
-  email: "yukangzhu@g.ucla.edu",
+  emails: ["zhuyukang2000@gmail.com", "yukangzhu@g.ucla.edu"],
   about: [
-    "I am a software engineer and researcher based in Hangzhou, China. I received an M.S. in Electrical and Computer Engineering from the University of California, Los Angeles, and a B.E. in Electronic Science and Technology from Shanghai Jiao Tong University.",
-    "At TikTok's Global E-Commerce I worked as a software engineer, building core modules of the Seller Center and the agent harness behind seller-facing LLM features. My research focuses on data-efficient reinforcement learning with verifiable rewards (RLVR) and self-evolving LLM agents, and I am currently a research intern at Westlake University.",
+    "I'm a researcher and software engineer working on large language models. Most of my time goes into two questions: how to teach models to reason efficiently, and how to build agents that get better at their work by learning from their own mistakes.",
+    "Before this, I spent almost two years at TikTok as a software engineer on the e-commerce team. I worked on the Seller Center web & mobile applications and later on the agent infrastructure behind its LLM features. I also explored agentic development in depth, working to integrate AI capabilities across our entire engineering and business workflow. Shipping things to real users changed how I think about research. These days I care a lot about whether an idea still works once it leaves the paper.",
+    "Right now I'm a research intern at Westlake University in Hangzhou, advised by Tailin Wu. I did my master's at UCLA and my undergrad at Shanghai Jiao Tong University.",
   ],
   social: {
-    github: "",
+    github: "https://github.com/kayneZhu",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/yukang-zhu-b33a6a250/",
     scholar: "",

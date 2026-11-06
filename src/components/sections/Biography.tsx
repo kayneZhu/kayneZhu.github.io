@@ -11,7 +11,7 @@ const subsectionHeadingClassName =
 
 function iconLinks(): { href: string; label: string; icon: LucideIcon }[] {
   const links: { href: string; label: string; icon: LucideIcon }[] = [
-    { href: `mailto:${siteConfig.email}`, label: "Email", icon: Mail },
+    { href: `mailto:${siteConfig.emails[0]}`, label: "Email", icon: Mail },
     { href: siteConfig.social.linkedin, label: "LinkedIn", icon: Linkedin },
   ];
 
@@ -40,14 +40,22 @@ export function Biography() {
           <img
             src={photo}
             alt="Yukang Zhu"
-            width={320}
-            height={320}
+            width={440}
+            height={440}
             loading="eager"
-            className="h-40 w-40 rounded-full object-cover"
+            className="w-full max-w-[176px] aspect-square rounded-lg object-cover border border-border/60"
           />
           <h1 className="mt-4 text-xl font-semibold">{siteConfig.name}</h1>
-          <p className="mt-1 text-muted-foreground">{siteConfig.role}</p>
-          <p className="mt-1 text-sm text-muted-foreground">{siteConfig.affiliation}</p>
+          <div className="mt-1 text-sm">
+            {siteConfig.roles.map((role, index) => (
+              <p
+                key={role}
+                className={index === 0 ? "text-foreground/80" : "text-muted-foreground"}
+              >
+                {role}
+              </p>
+            ))}
+          </div>
           <div className="mt-4 flex items-center gap-1">
             {links.map((link) => {
               const Icon = link.icon;
@@ -97,11 +105,9 @@ export function Biography() {
               <div className="mt-3 space-y-4">
                 {profile.education.map((item) => (
                   <div key={item.institution}>
-                    <p className="text-sm font-medium">{item.degree}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {item.institution} · {item.period}
-                    </p>
-                    <p className="text-xs text-muted-foreground">GPA: {item.gpa}</p>
+                    <p className="font-semibold">{item.institution}</p>
+                    <p className="text-sm">{item.degree}</p>
+                    <p className="text-sm text-muted-foreground">{item.period}</p>
                   </div>
                 ))}
               </div>

@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="container flex h-14 items-center justify-between">
         <a href="#" className="text-sm font-semibold tracking-tight">
-          {siteConfig.name}
+          {siteConfig.shortName}
         </a>
 
         <nav className="flex items-center gap-1">

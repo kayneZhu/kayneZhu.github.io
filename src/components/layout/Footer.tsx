@@ -6,7 +6,7 @@ export function Footer() {
     siteConfig.social.github && { label: "GitHub", href: siteConfig.social.github },
     siteConfig.social.twitter && { label: "Twitter", href: siteConfig.social.twitter },
     siteConfig.social.linkedin && { label: "LinkedIn", href: siteConfig.social.linkedin },
-    siteConfig.email && { label: "Email", href: `mailto:${siteConfig.email}` },
+    { label: "Email", href: `mailto:${siteConfig.emails[0]}` },
   ].filter(Boolean) as { label: string; href: string }[];
 
   return (

@@ -31,6 +31,21 @@ function Venue({ publication }: { publication: Publication }) {
       {publication.note ? (
         <Badge className="ml-2 align-middle not-italic">{publication.note}</Badge>
       ) : null}
+      {publication.links ? (
+        <span className="ml-3 inline-flex gap-3 align-middle">
+          {publication.links.map((link) => (
+            <a
+              key={link.label}
+              href={link.url}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </a>
+          ))}
+        </span>
+      ) : null}
     </p>
   );
 }
@@ -45,6 +60,9 @@ export function Publications() {
       <ol className="list-decimal space-y-8 pl-5 marker:text-muted-foreground">
         {profile.publications.map((publication) => (
           <li key={publication.title} className="pl-1">
+            <p className="mb-1 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              {publication.tags.join(" · ")}
+            </p>
             <p className="font-medium">{publication.title}</p>
             <Authors authors={publication.authors} />
             <Venue publication={publication} />
