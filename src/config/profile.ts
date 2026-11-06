@@ -69,7 +69,7 @@ export const profile: Profile = {
       location: "",
       person: { role: "Advisor", name: "Tailin Wu", url: "https://tailin.org/" },
       summary:
-        "I'm building agents that get better by rewriting their own skill files after each task, with no fine-tuning involved. Right now I'm testing them on coding, terminal, and instruction-following benchmarks.",
+        "Built agents that get better by rewriting their own skill files after each task, with no fine-tuning involved. Tested on coding, terminal, and instruction-following benchmarks.",
     },
     {
       title: "Independent Researcher",
