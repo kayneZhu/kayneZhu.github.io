@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages has no server-side routing, so unknown paths hit 404.html.
+      // We stash the intended path and bounce to the SPA entry (index.html),
+      // where the inline script in index.html restores it via the History API.
+      //
+      // BASE must match Vite's `base`:
+      //   - user page / custom domain  -> "/"
+      //   - project page               -> "/<repo>/"
+      var BASE = "/";
+      var full = location.pathname + location.search + location.hash;
+      sessionStorage.setItem("spa:redirect", full);
+      location.replace(BASE);
+    </script>
+  </head>
+  <body></body>
+</html>

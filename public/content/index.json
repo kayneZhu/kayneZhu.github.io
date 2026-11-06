@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "posts": [
+    {
+      "slug": "hello-world",
+      "title": "Hello, world — why I built this site",
+      "date": "2026-07-20",
+      "summary": "A short note on why I put up a personal site, and how the blog is wired together.",
+      "cover": "assets/hello-world.svg",
+      "tags": ["meta"],
+      "readingTime": 3
+    },
+    {
+      "slug": "designing-a-content-protocol",
+      "title": "Designing a lightweight content protocol",
+      "date": "2026-07-15",
+      "summary": "How this blog keeps post bodies out of the frontend bundle by fetching Markdown from a remote content repository on demand.",
+      "cover": "assets/content-protocol.svg",
+      "tags": ["engineering"],
+      "readingTime": 5
+    }
+  ]
+}

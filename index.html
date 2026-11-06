@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yukang Zhu is a software engineer and researcher based in Hangzhou, working on data-efficient RLVR and self-evolving LLM agents."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Yukang Zhu</title>
+    <!-- SPA redirect for GitHub Pages: restores the deep link stashed by 404.html -->
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("spa:redirect");
+        if (redirect) {
+          sessionStorage.removeItem("spa:redirect");
+          if (redirect !== location.pathname + location.search + location.hash) {
+            history.replaceState(null, "", redirect);
+          }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
