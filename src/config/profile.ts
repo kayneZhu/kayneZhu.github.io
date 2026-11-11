@@ -83,7 +83,7 @@ export const profile: Profile = {
         affiliation: "Amazon",
       },
       summary:
-        "Worked with Zhen Han on getting RL training to learn from problems a model can't solve yet. With hints from a stronger model, 128 hard problems turned out to be enough to match a baseline trained on 2,000. The paper was accepted to Findings of EMNLP 2026.",
+        "Worked with Zhen Han on getting RL training to learn from problems a model can't solve yet. With hints from a stronger model, 128 hard problems turned out to be enough to match a baseline trained on 2,000. The paper was published in Findings of EMNLP 2026.",
     },
     {
       title: "Full-time Software Engineer",
@@ -120,13 +120,15 @@ export const profile: Profile = {
     {
       title: "Unlocking the Unsolvable: Teacher-Guided Curriculum for Data-Efficient RLVR",
       authors: ["Yukang Zhu", "Zhen Han"],
-      venue: "Findings of EMNLP 2026",
+      venue:
+        "Findings of the Association for Computational Linguistics: EMNLP 2026, pp. 19639–19658, Budapest, Hungary",
       year: 2026,
       tags: ["LLM Reasoning", "RLVR", "Curriculum Learning"],
-      status: "Accepted",
       links: [
         { label: "Paper", url: "https://aclanthology.org/2026.findings-emnlp.931/" },
+        { label: "PDF", url: "https://aclanthology.org/2026.findings-emnlp.931.pdf" },
         { label: "arXiv", url: "https://arxiv.org/abs/2609.13997" },
+        { label: "BibTeX", url: "https://aclanthology.org/2026.findings-emnlp.931.bib" },
       ],
     },
     {
