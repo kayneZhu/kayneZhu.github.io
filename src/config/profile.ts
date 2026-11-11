@@ -161,7 +161,7 @@ export const profile: Profile = {
       venue: "Journal of Lightwave Technology, 2026",
       year: 2026,
       tags: ["Physics-Guided ML", "KAN", "Optical Networking"],
-      status: "Under review",
+      status: "Accepted",
       note: "Invited as OFC 2026 ML Challenge Winner",
       equalContribution: true,
     },
