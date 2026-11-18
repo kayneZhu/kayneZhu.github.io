@@ -163,9 +163,12 @@ export const profile: Profile = {
       venue: "Journal of Lightwave Technology, 2026",
       year: 2026,
       tags: ["Physics-Guided ML", "KAN", "Optical Networking"],
-      status: "Accepted",
       note: "Invited as OFC 2026 ML Challenge Winner",
       equalContribution: true,
+      links: [
+        { label: "Paper", url: "https://ieeexplore.ieee.org/document/11797531" },
+        { label: "DOI", url: "https://doi.org/10.1109/JLT.2026.3753970" },
+      ],
     },
     {
       title:
