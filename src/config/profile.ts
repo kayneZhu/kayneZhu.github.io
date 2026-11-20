@@ -44,10 +44,10 @@ export interface Profile {
 
 export const profile: Profile = {
   interests: [
-    "LLM Alignment & Reasoning",
-    "Continual Learning of Language Agents",
-    "Software Architecture of AI Systems",
-    "Accountable and Responsible AI",
+    "Reinforcement Learning for LLM Reasoning & Post-Training",
+    "Self-Improving and Continual-Learning Agents",
+    "Reliable AI Agents for Software Engineering",
+    "Evaluation, Monitoring & Oversight of AI Systems",
   ],
   education: [
     {
@@ -72,15 +72,15 @@ export const profile: Profile = {
         "Built agents that get better by rewriting their own skill files after each task, with no fine-tuning involved. Tested on coding, terminal, and instruction-following benchmarks.",
     },
     {
-      title: "Independent Researcher",
-      employer: "Independent",
+      title: "Research Assistant",
+      employer: "",
       period: "Dec 2025 – May 2026",
       location: "",
       person: {
-        role: "Collaborator",
+        role: "Advisor",
         name: "Zhen Han",
         url: "https://sites.google.com/view/zhenhan/home",
-        affiliation: "Amazon",
+        affiliation: "Amazon Web Services (AWS)",
       },
       summary:
         "Worked with Zhen Han on getting RL training to learn from problems a model can't solve yet. With hints from a stronger model, 128 hard problems turned out to be enough to match a baseline trained on 2,000. The paper was published in Findings of EMNLP 2026.",

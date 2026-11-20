@@ -2,10 +2,10 @@ import { Section } from "@/components/sections/Section";
 import { profile, type ExperienceItem, type Person } from "@/config/profile";
 import { cn } from "@/lib/utils";
 
-function PersonCredit({ person }: { person: Person }) {
+function PersonCredit({ person, leading }: { person: Person; leading: boolean }) {
   return (
     <span className="text-muted-foreground">
-      {` · ${person.role}: `}
+      {`${leading ? " · " : ""}${person.role}: `}
       {person.url !== undefined ? (
         <a
           href={person.url}
@@ -18,7 +18,7 @@ function PersonCredit({ person }: { person: Person }) {
       ) : (
         person.name
       )}
-      {person.affiliation !== undefined ? ` (${person.affiliation})` : null}
+      {person.affiliation !== undefined ? `, ${person.affiliation}` : null}
     </span>
   );
 }
@@ -29,7 +29,9 @@ function ExperienceEntry({ item }: { item: ExperienceItem }) {
       <p className="font-medium">{item.title}</p>
       <p className="text-sm text-foreground/80">
         {item.employer}
-        {item.person !== undefined ? <PersonCredit person={item.person} /> : null}
+        {item.person !== undefined ? (
+          <PersonCredit person={item.person} leading={item.employer !== ""} />
+        ) : null}
       </p>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.summary}</p>
     </div>
